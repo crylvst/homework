@@ -3,8 +3,8 @@ a = input("Пожалуйста, введите длину первой стор
 b = input("Пожалуйста, введите длину второй стороны: ")
 x = input("Пожалуйста, введите значение угла между этими сторонами: ")
 import math
-cos = math.cos(int(x))
-c2 = int(a) ** 2 + int(b) ** 2 - 2 * int(a) * int(b) * int(cos)
-c = math.sqrt(int(c2))
-print(int(c))
+cos = math.cos(float(x))
+c2 = float(a) ** 2 + float(b) ** 2 - 2 * float(a) * float(b) * float(cos)
+c = math.sqrt(float(c2))
+print(float(c))
 input()
