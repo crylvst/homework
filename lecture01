@@ -4,7 +4,7 @@ b = input("Пожалуйста, введите длину второй стор
 x = input("Пожалуйста, введите значение угла между этими сторонами: ")
 import math
 cos = math.cos(float(x))
-c2 = float(a) ** 2 + float(b) ** 2 - 2 * float(a) * float(b) * float(cos)
-c = math.sqrt(float(c2))
+c2 = float(a) ** 2 + float(b) ** 2 - 2 * float(a) * float(b) * cos
+c = math.sqrt(c2)
 print(float(c))
 input()
