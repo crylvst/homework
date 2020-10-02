@@ -1,202 +1,205 @@
 #Так полезно прописывать 200 строк if!
 a = input("Пожалуйста, введите целое число от 0 до 99: ")
-if int(a) == 1:
-    print("Один")
-if int(a) == 2:
-    print("Два")
-if int(a) == 3:
-    print("Три")
-if int(a) == 4:
-    print("Четыре")
-if int(a) == 5:
-    print("Пять")
-if int(a) == 6:
-    print("Шесть")
-if int(a) == 7:
-    print("Семь")
-if int(a) == 8:
-    print("Восемь")
-if int(a) == 9:
-    print("Девять")
-if int(a) == 10:
-    print("Десять")
-if int(a) == 11:
-    print("Одиннадцать")
-if int(a) == 12:
-    print("Двенадцать")
-if int(a) == 13:
-    print("Тринадцать")
-if int(a) == 14:
-    print("Четырнадцать")
-if int(a) == 15:
-    print("Пятнадцать")
-if int(a) == 16:
-    print("Шестнадцать")
-if int(a) == 17:
-    print("Семнадцать")
-if int(a) == 18:
-    print("Восемнадцать")
-if int(a) == 19:
-    print("Девятнадцать")
-if int(a) == 20:
-    print("Двадцать")
-if int(a) == 21:
-    print("Двадцать один")
-if int(a) == 22:
-    print("Двадцать два")
-if int(a) == 23:
-    print("Двадцать три")
-if int(a) == 24:
-    print("Двадцать четыре")
-if int(a) == 25:
-    print("Двадцать пять")
-if int(a) == 26:
-    print("Двадцать шесть")
-if int(a) == 27:
-    print("Двадцать семь")
-if int(a) == 28:
-    print("Двадцать восемь")
-if int(a) == 29:
-    print("Двадцать девять")
-if int(a) == 30:
-    print("Тридцать")
-if int(a) == 31:
-    print("Тридцать один")
-if int(a) == 32:
-    print("Тридцать два")
-if int(a) == 33:
-    print("Тридцать три")
-if int(a) == 34:
-    print("Тридцать четыре")
-if int(a) == 35:
-    print("Тридцать пять")
-if int(a) == 36:
-    print("Тридцать шесть")
-if int(a) == 37:
-    print("Тридцать семь")
-if int(a) == 38:
-    print("Тридцать восемь")
-if int(a) == 39:
-    print("Тридцать девять")
-if int(a) == 40:
-    print("Сорок")
-if int(a) == 41:
-    print("Сорок один")
-if int(a) == 42:
-    print("Сорок два")
-if int(a) == 43:
-    print("Сорок три")
-if int(a) == 44:
-    print("Сорок четыре")
-if int(a) == 45:
-    print("Сорок пять")
-if int(a) == 46:
-    print("Сорок шесть")
-if int(a) == 47:
-    print("Сорок семь")
-if int(a) == 48:
-    print("Сорок восемь")
-if int(a) == 49:
-    print("Сорок девять")
-if int(a) == 50:
-    print("Пятьдесят")
-if int(a) == 51:
-    print("Пятьдесят один")
-if int(a) == 52:
-    print("Пятьдесят два")
-if int(a) == 53:
-    print("Пятьдесят три")
-if int(a) == 54:
-    print("Пятьдесят четыре")
-if int(a) == 55:
-    print("Пятьдесят пять")
-if int(a) == 56:
-    print("Пятьдесят шесть")
-if int(a) == 57:
-    print("Пятьдесят семь")
-if int(a) == 58:
-    print("Пятьдесят восемь")
-if int(a) == 59:
-    print("Пятьдесят девять")
-if int(a) == 60:
-    print("Шестьдесят")
-if int(a) == 61:
-    print("Шестьдесят один")
-if int(a) == 62:
-    print("Шестьдесят два")
-if int(a) == 63:
-    print("Шестьдесят три")
-if int(a) == 64:
-    print("Шестьдесят четыре")
-if int(a) == 65:
-    print("Шестьдесят пять")
-if int(a) == 66:
-    print("Шестьдесят шесть")
-if int(a) == 67:
-    print("Шестьдесят семь")
-if int(a) == 68:
-    print("Шестьдесят восемь")
-if int(a) == 69:
-    print("Шестьдесят девять")
-if int(a) == 70:
-    print("Семьдесят")
-if int(a) == 71:
-    print("Семьдесят один")
-if int(a) == 72:
-    print("Семьдесят два")
-if int(a) == 73:
-    print("Семьдесят три")
-if int(a) == 74:
-    print("Семьдесят четыре")
-if int(a) == 75:
-    print("Семьдесят пять")
-if int(a) == 76:
-    print("Семьдесят шесть")
-if int(a) == 77:
-    print("Семьдесят семь")
-if int(a) == 78:
-    print("Семьдесят восемь")
-if int(a) == 79:
-    print("Семьдесят девять")
-if int(a) == 80:
-    print("Восемьдесят")
-if int(a) == 81:
-    print("Восемьдесят один")
-if int(a) == 82:
-    print("Восемьдесят два")
-if int(a) == 83:
-    print("Восемьдесят три")
-if int(a) == 84:
-    print("Восемьдесят четыре")
-if int(a) == 85:
-    print("Восемьдесят пять")
-if int(a) == 86:
-    print("Восемьдесят шесть")
-if int(a) == 87:
-    print("Восемьдесят семь")
-if int(a) == 88:
-    print("Восемьдесят восемь")
-if int(a) == 89:
-    print("Восемьдесят девять")
-if int(a) == 90:
-    print("Девяносто")
-if int(a) == 91:
-    print("Девяносто один")
-if int(a) == 92:
-    print("Девяносто два")
-if int(a) == 93:
-    print("Девяносто три")
-if int(a) == 94:
-    print("Девяносто четыре")
-if int(a) == 95:
-    print("Девяносто пять")
-if int(a) == 96:
-    print("Девяносто шесть")
-if int(a) == 97:
-    print("Девяносто семь")
-if int(a) == 98:
-    print("Девяносто восемь")
-if int(a) == 99:
-    print("Девяносто девять")
-if int(a) > 99:
-    print("Введите число до 99.")
+if a.isdigit():
+    if int(a) == 1:
+        print("Один")
+    if int(a) == 2:
+        print("Два")
+    if int(a) == 3:
+        print("Три")
+    if int(a) == 4:
+        print("Четыре")
+    if int(a) == 5:
+        print("Пять")
+    if int(a) == 6:
+        print("Шесть")
+    if int(a) == 7:
+        print("Семь")
+    if int(a) == 8:
+        print("Восемь")
+    if int(a) == 9:
+        print("Девять")
+    if int(a) == 10:
+        print("Десять")
+    if int(a) == 11:
+        print("Одиннадцать")
+    if int(a) == 12:
+        print("Двенадцать")
+    if int(a) == 13:
+        print("Тринадцать")
+    if int(a) == 14:
+        print("Четырнадцать")
+    if int(a) == 15:
+        print("Пятнадцать")
+    if int(a) == 16:
+        print("Шестнадцать")
+    if int(a) == 17:
+        print("Семнадцать")
+    if int(a) == 18:
+        print("Восемнадцать")
+    if int(a) == 19:
+        print("Девятнадцать")
+    if int(a) == 20:
+        print("Двадцать")
+    if int(a) == 21:
+        print("Двадцать один")
+    if int(a) == 22:
+        print("Двадцать два")
+    if int(a) == 23:
+        print("Двадцать три")
+    if int(a) == 24:
+        print("Двадцать четыре")
+    if int(a) == 25:
+        print("Двадцать пять")
+    if int(a) == 26:
+        print("Двадцать шесть")
+    if int(a) == 27:
+        print("Двадцать семь")
+    if int(a) == 28:
+        print("Двадцать восемь")
+    if int(a) == 29:
+        print("Двадцать девять")
+    if int(a) == 30:
+        print("Тридцать")
+    if int(a) == 31:
+        print("Тридцать один")
+    if int(a) == 32:
+        print("Тридцать два")
+    if int(a) == 33:
+        print("Тридцать три")
+    if int(a) == 34:
+        print("Тридцать четыре")
+    if int(a) == 35:
+        print("Тридцать пять")
+    if int(a) == 36:
+        print("Тридцать шесть")
+    if int(a) == 37:
+        print("Тридцать семь")
+    if int(a) == 38:
+        print("Тридцать восемь")
+    if int(a) == 39:
+        print("Тридцать девять")
+    if int(a) == 40:
+        print("Сорок")
+    if int(a) == 41:
+        print("Сорок один")
+    if int(a) == 42:
+        print("Сорок два")
+    if int(a) == 43:
+        print("Сорок три")
+    if int(a) == 44:
+        print("Сорок четыре")
+    if int(a) == 45:
+        print("Сорок пять")
+    if int(a) == 46:
+        print("Сорок шесть")
+    if int(a) == 47:
+        print("Сорок семь")
+    if int(a) == 48:
+        print("Сорок восемь")
+    if int(a) == 49:
+        print("Сорок девять")
+    if int(a) == 50:
+        print("Пятьдесят")
+    if int(a) == 51:
+        print("Пятьдесят один")
+    if int(a) == 52:
+        print("Пятьдесят два")
+    if int(a) == 53:
+        print("Пятьдесят три")
+    if int(a) == 54:
+        print("Пятьдесят четыре")
+    if int(a) == 55:
+        print("Пятьдесят пять")
+    if int(a) == 56:
+        print("Пятьдесят шесть")
+    if int(a) == 57:
+        print("Пятьдесят семь")
+    if int(a) == 58:
+        print("Пятьдесят восемь")
+    if int(a) == 59:
+        print("Пятьдесят девять")
+    if int(a) == 60:
+        print("Шестьдесят")
+    if int(a) == 61:
+        print("Шестьдесят один")
+    if int(a) == 62:
+        print("Шестьдесят два")
+    if int(a) == 63:
+        print("Шестьдесят три")
+    if int(a) == 64:
+        print("Шестьдесят четыре")
+    if int(a) == 65:
+        print("Шестьдесят пять")
+    if int(a) == 66:
+        print("Шестьдесят шесть")
+    if int(a) == 67:
+        print("Шестьдесят семь")
+    if int(a) == 68:
+        print("Шестьдесят восемь")
+    if int(a) == 69:
+        print("Шестьдесят девять")
+    if int(a) == 70:
+        print("Семьдесят")
+    if int(a) == 71:
+        print("Семьдесят один")
+    if int(a) == 72:
+        print("Семьдесят два")
+    if int(a) == 73:
+        print("Семьдесят три")
+    if int(a) == 74:
+        print("Семьдесят четыре")
+    if int(a) == 75:
+        print("Семьдесят пять")
+    if int(a) == 76:
+        print("Семьдесят шесть")
+    if int(a) == 77:
+        print("Семьдесят семь")
+    if int(a) == 78:
+        print("Семьдесят восемь")
+    if int(a) == 79:
+        print("Семьдесят девять")
+    if int(a) == 80:
+        print("Восемьдесят")
+    if int(a) == 81:
+        print("Восемьдесят один")
+    if int(a) == 82:
+        print("Восемьдесят два")
+    if int(a) == 83:
+        print("Восемьдесят три")
+    if int(a) == 84:
+        print("Восемьдесят четыре")
+    if int(a) == 85:
+        print("Восемьдесят пять")
+    if int(a) == 86:
+        print("Восемьдесят шесть")
+    if int(a) == 87:
+        print("Восемьдесят семь")
+    if int(a) == 88:
+        print("Восемьдесят восемь")
+    if int(a) == 89:
+        print("Восемьдесят девять")
+    if int(a) == 90:
+        print("Девяносто")
+    if int(a) == 91:
+        print("Девяносто один")
+    if int(a) == 92:
+        print("Девяносто два")
+    if int(a) == 93:
+        print("Девяносто три")
+    if int(a) == 94:
+        print("Девяносто четыре")
+    if int(a) == 95:
+        print("Девяносто пять")
+    if int(a) == 96:
+        print("Девяносто шесть")
+    if int(a) == 97:
+        print("Девяносто семь")
+    if int(a) == 98:
+        print("Девяносто восемь")
+    if int(a) == 99:
+        print("Девяносто девять")
+    if int(a) > 99:
+        print("Введите число до 99.")
+else:
+    print("Введите число.")
