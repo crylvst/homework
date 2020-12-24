@@ -1,0 +1,49 @@
+from bs4 import BeautifulSoup as bs
+import time
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import requests
+
+# прокрутка страницы
+URL = 'https://tass.ru/sport'
+
+extr_link = []
+full_link = []
+part0 = 'https://tass.ru'
+
+driver_path = "D:/study/python_projects/parser/chromedriver.exe"
+brave_path = "C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/brave.exe"
+option = webdriver.ChromeOptions()
+option.binary_location = brave_path
+browser = webdriver.Chrome(executable_path=driver_path, options=option)
+browser.get(URL)
+
+soup = bs(browser.page_source, "html.parser")
+
+for i in range(2):
+    html = browser.find_element_by_tag_name('html')
+    html.send_keys(Keys.END)
+    time.sleep(0.5)
+    for a in soup.find_all('a', {"class": "cardWrap_link__2AN_X"}, href=True):
+        if a.text:
+            extr_link.append(a['href'])
+full_link = [part0 + extr_link for extr_link in extr_link]
+print(full_link)
+time.sleep(4)
+browser.close()
+
+# достаем текст
+for i in range(len(full_link)):
+    r = requests.get(full_link[i])
+    page_content = r.text
+    soup = bs(page_content, 'html.parser')
+    title = []
+    title = soup.findAll("h1", {"class": "news-header__title"})[0].decode_contents() # находим заголовок новости
+    lead = []
+    lead = soup.findAll("div", {"class": "news-header__lead"})[0].decode_contents() # находим лид новости
+    news_text = []
+    news_text = soup.findAll('p') # находим текст новости
+    result = []
+    result.append([title,lead,news_text])
+    print(result)
