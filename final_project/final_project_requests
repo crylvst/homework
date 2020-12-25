@@ -1,0 +1,56 @@
+from bs4 import BeautifulSoup as bs
+import pandas as pd
+import requests
+import json
+import re
+
+# прокрутка страницы
+offset = 0
+min_links = 200
+step = 10
+URL = f"https://tass.ru/rubric/api/v1/rubric-articles?slug=sport&type=all&step=NaN&tuplesLimit={step}&newsOffset="
+
+part = "https://tass.ru/{}/{}"
+links = []
+while len(links) < 100:
+    response = requests.get(URL + str(offset))
+    offset += 20
+    if response.status_code != 200:
+        raise Exception()
+    print(response)
+    news = json.loads(response.text)
+
+    for record in news["data"]["news"]:
+        id_news = record[0]["id"]
+        slug = record[0]["slug"]
+        links.append(part.format(slug, id_news))
+
+# достаем текст
+for i in range(len(links)):
+    r = requests.get(links[i])
+    page_content = r.text
+    soup = bs(page_content, 'html.parser')
+    title = []
+    title = soup.findAll("h1", {"class": "news-header__title"})[0].decode_contents()  # находим заголовок новости
+    if len(title) <= 0: # находим заголовок в альтернативном дизайне страницы
+        title = soup.findAll("span", {"class": "article__title"})[0].decode_contents()
+    title_pattern = "\n"
+    for el in title:
+        clean_title = re.sub(title_pattern, "", title[:])  # чистим заголовок от html тегов
+    lead = []
+    lead = soup.findAll("div", {"class": "news-header__lead"})[0].decode_contents()  # находим лид новости
+    if len(lead) <= 0:  # находим лид в альтернативном дизайне страницы
+        lead = soup.findAll("div", {"class": "article-lead"})[0].decode_contents()
+    news_text = []
+    news_text = str(soup.findAll(['p', 'h2']))
+    pattern = "<.*?>"
+    clean_title = []
+    clean_text = []
+    for el in news_text:
+        clean_text = re.sub(pattern, "", news_text[:])  # чистим текст новости от html тегов
+    result = []
+    result.append([clean_title, lead, clean_text])
+    
+    # заносим данные в таблицу
+    df = pd.DataFrame(result, columns=['title', 'lead', 'text'])
+    df.to_csv('extr_news.csv')
