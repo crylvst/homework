@@ -26,21 +26,30 @@ while len(links) < 100:
         links.append(part.format(slug, id_news))
 
 # достаем текст
+result = []
 for i in range(len(links)):
     r = requests.get(links[i])
     page_content = r.text
     soup = bs(page_content, 'html.parser')
     title = []
-    title = soup.findAll("h1", {"class": "news-header__title"})[0].decode_contents()  # находим заголовок новости
+    extr_title = []
+    title = soup.findAll("h1", {"class": "news-header__title"})  # находим заголовок новости
+    if len(title) > 0:
+        extr_title = title[0].decode_contents()
     if len(title) <= 0: # находим заголовок в альтернативном дизайне страницы
-        title = soup.findAll("span", {"class": "article__title"})[0].decode_contents()
+        title = soup.findAll("span", {"class": "article__title"})
+        extr_title = title[0].decode_contents()
     title_pattern = "\n"
-    for el in title:
-        clean_title = re.sub(title_pattern, "", title[:])  # чистим заголовок от html тегов
+    for el in extr_title:
+        clean_title = re.sub(title_pattern, "", extr_title[:])  # чистим заголовок от html тегов
     lead = []
-    lead = soup.findAll("div", {"class": "news-header__lead"})[0].decode_contents()  # находим лид новости
+    extr_lead = []
+    lead = soup.findAll("div", {"class": "news-header__lead"})  # находим лид новости
+    if len(lead) > 0:
+        extr_lead = lead[0].decode_contents()
     if len(lead) <= 0:  # находим лид в альтернативном дизайне страницы
-        lead = soup.findAll("div", {"class": "article-lead"})[0].decode_contents()
+        lead = soup.findAll("div", {"class": "article-lead"})
+        extr_lead = lead[0].decode_contents()
     news_text = []
     news_text = str(soup.findAll(['p', 'h2']))
     pattern = "<.*?>"
@@ -48,9 +57,9 @@ for i in range(len(links)):
     clean_text = []
     for el in news_text:
         clean_text = re.sub(pattern, "", news_text[:])  # чистим текст новости от html тегов
-    result = []
-    result.append([clean_title, lead, clean_text])
-    
-    # заносим данные в таблицу
-    df = pd.DataFrame(result, columns=['title', 'lead', 'text'])
-    df.to_csv('extr_news.csv')
+    result.append([clean_title, extr_lead, clean_text])
+
+# заносим данные в таблицу
+df = pd.DataFrame(result)
+df.columns = ['title', 'lead', 'text']
+df.to_csv('extr_news.csv')
