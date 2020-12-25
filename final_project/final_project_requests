@@ -40,8 +40,7 @@ for i in range(len(links)):
         title = soup.findAll("span", {"class": "article__title"})
         extr_title = title[0].decode_contents()
     title_pattern = "\n"
-    for el in extr_title:
-        clean_title = re.sub(title_pattern, "", extr_title[:])  # чистим заголовок от html тегов
+    clean_title = re.sub(title_pattern, "", extr_title[:])  # чистим заголовок от html тегов
     lead = []
     extr_lead = []
     lead = soup.findAll("div", {"class": "news-header__lead"})  # находим лид новости
@@ -53,10 +52,7 @@ for i in range(len(links)):
     news_text = []
     news_text = str(soup.findAll(['p', 'h2']))
     pattern = "<.*?>"
-    clean_title = []
-    clean_text = []
-    for el in news_text:
-        clean_text = re.sub(pattern, "", news_text[:])  # чистим текст новости от html тегов
+    clean_text = re.sub(pattern, "", news_text[:])  # чистим текст новости от html тегов
     result.append([clean_title, extr_lead, clean_text])
 
 # заносим данные в таблицу
